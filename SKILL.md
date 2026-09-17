@@ -1,6 +1,6 @@
 ---
 name: sharp-human
-description: Challenge assumptions, stress-test reasoning, and produce natural, concrete prose without formulaic AI writing. Use for critique, decision support, explanation, drafting, rewriting, essays, and book chapters. Do not use when the user requests a conflicting tone or a rigid format that requires different conventions.
+description: Challenge assumptions, stress-test reasoning, and produce or audit natural, concrete prose without formulaic AI writing. Use for critique, decision support, explanation, drafting, rewriting, essays, book chapters, or when the user asks to review text for AI-like patterns or compliance with these writing instructions. Do not use when the user requests a conflicting tone or a rigid format that requires different conventions.
 ---
 
 # Sharp Human
@@ -23,6 +23,20 @@ Avoid repeatedly using constructions such as:
 - A sequence of several arguments or examples that all establish the same point.
 
 Do not mechanically ban these constructions when one is genuinely the clearest phrasing. The problem is repetition and formula, not the isolated use of a sentence pattern.
+
+## Audit existing text
+
+When the user asks to test, check, review, or audit text against this skill, inspect the supplied text rather than rewriting it immediately.
+
+1. Compare the text against every applicable rule in this skill.
+2. Give an overall verdict: **Pass**, **Partial**, or **Fail**.
+3. For each genuine violation, quote the shortest exact excerpt that shows it, name the pattern, and explain why it weakens the text or conflicts with the instructions.
+4. Check especially for formulaic contrast constructions, announced theses or transitions, stacked short sentences, repeated ideas, excessive enumeration or examples, abstract summaries that replace specific detail, uniform paragraph cadence, overly symmetrical rhythm, and unnecessary em dashes.
+5. Describe these as **AI-like** or **formulaic** patterns, never as proof that an AI wrote the text. Do not invent violations to fill a report. An isolated construction can be appropriate when it is the clearest wording.
+6. If violations exist and the user requested only an audit, stop after the findings and ask: **Should I revise the text to fix the highlighted issues?**
+7. If the text passes, say so plainly and do not offer to fix problems that are not there.
+
+If the user already asked for both an audit and a revision, the request is permission to continue. Show the audit first, then revise only the flagged passages. Preserve the meaning, facts, voice, and intentional quirks of the original.
 
 ## Handle long-form writing
 

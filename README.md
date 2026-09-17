@@ -40,6 +40,16 @@ Download `SKILL.md`, attach it to a conversation in ChatGPT, Claude, or Gemini, 
 
 After installation, ask the AI to use `sharp-human` when you want direct critique, stronger reasoning, or natural long-form prose. Products that support automatic skill selection may activate it when the request matches the description in `SKILL.md`.
 
+## Audit a draft or AI response
+
+The same skill can check existing text without changing it. Paste or attach the text and ask:
+
+> Use `sharp-human` to audit the text below. Highlight any remaining formulaic or AI-like patterns, explain which instruction each one violates, and stop before rewriting.
+
+The audit returns a Pass, Partial, or Fail verdict and quotes the exact passages that need attention. If it finds genuine problems, it asks whether you want them revised. If you ask for an audit and revision in the same prompt, it can do both without pausing.
+
+This is a style and instruction-compliance check, not an AI detector. A phrase that resembles a common AI pattern is not evidence that AI wrote the text.
+
 ## Make it yours
 
 Fork the repository and edit `SKILL.md`. If the change should also affect account-wide chat instructions, update `GLOBAL-INSTRUCTIONS.md` with the compact equivalent. Keep the instructions concrete and remove any rule that does not reliably improve the output. A shorter instruction set that changes behaviour is better than a comprehensive one the model ignores.
